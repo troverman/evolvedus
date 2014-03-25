@@ -1,14 +1,44 @@
 {{extend 'layout.html'}}
+<style>
+	#evolvedus-header{
+		margin-left:6%;
+		margin-right:6%;
+	}
+	#evolvedus-header-container{
+		background-color:rgb(225,225,225);
+		border:2px solid rgb(190,190,190);
+	}
+</style>
+<div id="evolvedus-header-container">
+	<div id="evolvedus-header">
+		<p class="lead" style="text-align:center">change the world~~~~!!!!</p>
+		<p class="lead" style="text-align:center">this is an announcement</p>
+		<p class="lead" style="text-align:center">this is content</p>
+		<p class="lead" style="text-align:center">this is content</p>
+		<p class="lead" style="text-align:center">this is content</p>
+		<p class="lead" style="text-align:center"><a>category1</a></p>
+		<p class="lead" style="text-align:center"><a>category2</a></p>
+		<p class="lead" style="text-align:center"><a>category3</a></p>
+		<p class="lead" style="text-align:center"><a>category4</a></p>
 
-<h1>evoulved err</h1>
-<h2>we dunt! evloved frm gud dern monkey</h2>
-<h3>muh nmne is mikey an im evolved</h3>
-<h3>u sdhul be too.</h3>
-<img src="http://ughh.com/store/covers_large/AM07LP.jpg?width=400&height=400&quality=100"/>
-<img src="http://curtislowe.files.wordpress.com/2008/01/animalsmonkey2.jpg"/>
-<img src="http://www.microscopy-uk.org.uk/mag/imgsep01/amoebaproteus450.jpg"/>
-
-<br><br><br>
-<img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTD06DS0fYBtuVGz4ydu1vV4t7PSH5chmTdjyph9KbWK9TQnLgm"/>
-<p class="lead">dur duer heur</p>
-<img src="http://www.ladiesliveandlearn.com/wp-content/uploads/2013/05/Cute-Sleeping-Baby-3.jpg"/>
+		<!--<p class="lead"><a href="/about/">about</a></p>
+		<p class="lead"><a href="/mission/">mission</a></p>
+		<p class="lead"><a href="/terms/">terms</a></p>
+		<p class="lead"><a href="/transparency/">transparency</a></p>
+		<p class="lead"><a href="/posts/">posts</a></p>
+		<p class="lead"><a href="/stats/">stats</a></p>-->
+	</div>
+</div>
+<br>
+<br>
+	{{for post in post_list:}}
+	<div class="centered-width">
+		<h1><a href="/post/{{=post['url']}}">{{=post['title']}}</a></h1><hr>
+		{{=XML(post['content'])}}<hr><br><br>
+	</div>
+	{{pass}}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>

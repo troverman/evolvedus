@@ -53,55 +53,12 @@ auth.settings.reset_password_requires_verification = True
 ################################################################
 
 ################################
-####academy#####################
+####post########################
 ################################  
-db.define_table('academy',
-    Field('url_title','string'),
+db.define_table('post',
+    Field('member_id','string'),
+    Field('url','string'),
     Field('title','string'),
-    Field('description','string'),
-
+    Field('content','text'),
 )
 
-################################
-####academy_tag#################
-################################ 
-db.define_table('academy_tag',
-    Field('academy_id','integer'),
-    Field('tag','string'),
-)
-
-################################
-####course######################
-################################ 
-db.define_table('course',
-    Field('academy_id_array','list:integer'),
-    Field('url_title','string'),
-    Field('title','string'),
-    Field('description','string')
-)
-
-################################
-####course_tag##################
-################################ 
-db.define_table('course_tag',
-    Field('academy_id','integer'),
-    Field('tag','string'),
-)
-
-################################
-####thread######################
-################################ 
-db.define_table('thread',
-    Field('academy_course_id_array','list:integer'),
-    Field('title','string'),
-    Field('thread_content','text'),
-
-)
-
-################################
-####thread_tag##################
-################################ 
-db.define_table('thread_tag',
-    Field('academy_id','integer'),
-    Field('tag','string'),
-)
